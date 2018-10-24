@@ -1,0 +1,851 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<title>匡威首页</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+		<link rel="stylesheet" href="css/index.min.css">
+		<link rel="stylesheet" href="css/bootstrap.css">
+		<script src="js/jquery-1.10.1.min.js"></script>
+		<script src="js/jquery.cookie.js"></script>
+
+		<script src="js/carousel.js"></script>
+
+		<script src="js/ajax.js"></script>
+		<script src="js/startMove.js"></script>
+		
+		<script src = 'js/require.js' async="true" defer data-main = 'js/main'></script>
+	</head>
+	<body>
+		
+		<!-- 头部 -->
+		<div class="container-fluid" id="header">
+			<div class="head_content row col-lg-12 col-md-12 col-sm-12 col-xs-12 col-lg-offset-0 col-md-offset-0 col-sm-offset-0 col-xs-offset-0" >
+				<div class="head_logo col-lg-2"><a href=""><img src="images/头部/header-footer-new3.png" alt=""></a></div>
+				<div class="head_help "><a class="help_link" target="_blank" href="html/order.html"><img src="" alt=""></a></div>
+				<div class="head_find ">
+					<a id="find_link" href="#"></a>
+					<a id="triangle2" href=""></a>
+				</div>
+				<div class="head_chat hidden-md"><a class="chat_link" target="_blank" href="html/commodity_details.html"></a></div>
+				<div class="head_car ">
+					<div class="car_linkd"><a class="car_linka hidden-xs" href="#">购物车</a></div>
+					<span class="car_num">0</span>
+				</div>
+				<div class="head_log ">
+					<div class="log_link1 hidden-sm hidden-xs"><a id="log_log" href="#">登陆</a></div>
+					<div class="log_link2 hidden-sm hidden-xs"><a class="log_a" href="#">/</a></div>
+					<div class="log_link3 hidden-sm hidden-xs"><a id="log_register" href="#">注册</a></div>
+					<div class="log_man"><a id="log_b" href="#"></a></div>
+					<a id="triangle" href=""></a>
+				</div>
+			</div>
+		</div>
+		<!-- 导航 -->
+		<div class="abc">
+			<div id="disembark1">
+				<div id="log_content">
+					<dl id="log_content_one">
+						<dt id="no_register">还未注册？</dt>
+						<dd id="yes_register">
+							注册账户
+							<span id="yes_register_logo"></span>
+						</dd>
+					</dl>
+					<dl id="log_content_tow">
+						<dt>您可以直接登陆</dt>
+						<a id="head_a" href=""></a>
+						<a href=""></a>
+						<a href=""></a>
+						<a href=""></a>
+					</dl>
+					<form action="">
+						<dl id="log_content_three">
+							<dt>已经成为会员？</dt>
+							<dd id="emil_phon"><input autocomplete="off" id="emil_phon_count" placeholder="邮箱/手机" type="text"></dd>
+							<span class="email_phone" style="color:red"></span>
+							<dd id="phon_password"><input autocomplete="off" id="phon_password_count" placeholder="账户密码" type="password"></dd>
+							<span class="email_phone_password" style="color:red"></span>
+							<dd id="security">
+								<input autocomplete="off" id="security_count" placeholder="请输入验证码" type="text">
+								<div id="security_count2"></div>
+								<span id="email_phone_security" style="color:red"></span>
+							</dd>
+							<dd id="another"><a id="another_count" href="#">换一张</a></dd>
+							<dd id="law">
+								<div id="law_frame">
+									一旦登录，即表明你同意匡威的<a href="">法律声明</a>和<a href="">使用规则</a>
+								</div>
+							</dd>
+							<button id="enter">
+								登陆
+								<span id="enter_logo"></span>
+							</button>
+							<dd id="forget_password">
+								<div id="password_count">
+								<span id="password_count_yes">
+									<img id="password_count_yes_ok" src="images/头部/cart-sprite1.png" alt="">
+								</span>
+								保持登陆状态
+								</div>
+								<div id="forget_p">忘记密码</div>
+							</dd>
+						</dl>
+					</form>
+					
+				</div>
+				<div id="register_content">
+					<dl id="register_content_dl">
+						<dd id="content_dl_one">
+							<ul>
+								<li>手机号码<b>*</b>
+									<div id="content_dl_one_iphone"><input autocomplete="off"  id="content_dl_one_iphone_count" type="text" placeholder="135xxxxx333"></div>
+									<span id="phone_hint" style="color:red"></span>
+								</li>
+								<li>电子邮箱<b>*</b>
+									<div id="content_dl_one_email"><input autocomplete="off" id="content_dl_one_email_count" type="text" placeholder="example@converse.com"></div>
+									<span id="email_hint" style="color:red" ></span>
+								</li>
+								<li>性别<b>*</b>
+									<div id="content_dl_one_sex">
+										<div id="content_dl_one_sex_man"><span id="select_sexman"><img id="select_sexman_img" src="images/头部/cart-sprite1.png" alt=""></span>男的</div>
+										<div id="content_dl_one_sex_woman"><span id="select_sexwoman"><img id="select_sexwoman_img" src="images/头部/cart-sprite1.png" alt=""></span>女的</div>
+									</div>
+								</li>
+							</ul>
+						</dd>
+						<dd id="content_dl_tow">
+							<ul>
+								<li>输入密码<b>*</b>
+									<div id="content_dl_tow_word"><input autocomplete="off"  id="content_dl_tow_word_count" type="password" placeholder="密码至少为6位字符"></div>
+									<span id="word_hint" style="color:red"></span>
+								</li>
+								<li>确认密码<b>*</b>
+									<div id="content_dl_tow_aword"><input autocomplete="off"  id="content_dl_tow_aword_count" type="password" placeholder="请再次输入密码"></div>
+									<span id="aword_hint" style="color:red"></span>
+								</li>
+								<li>生日（年-月-日）<b>*</b>
+									<div id="content_dl_tow_data">
+										<div id="content_dl_tow_year">
+											<span id="top_bottom"></span>
+											<!-- <span id="now_year">2018</span> -->
+											<select name="a" id="year">
+												<option value="2018">2018</option>
+												<option value="2017">2017</option>
+												<option value="2016">2016</option>
+												<option value="2015">2015</option>
+												<option value="2014">2014</option>
+												<option value="2013">2013</option>
+												<option value="2012">2012</option>
+												<option value="2011">2011</option>
+												<option value="2010">2010</option>
+												<option value="2009">2009</option>
+												<option value="2008">2008</option>
+												<option value="2007">2007</option>
+												<option value="2006">2006</option>
+												<option value="2005">2005</option>
+												<option value="2004">2004</option>
+												<option value="2003">2003</option>
+												<option value="2002">2002</option>
+												<option value="2001">2001</option>
+												<option value="2000">2000</option>
+												<option value="1999">1999</option>
+												<option value="1998">1998</option>
+												<option value="1997">1997</option>
+												<option value="1996">1996</option>
+												<option value="1995">1995</option>
+												<option value="1994">1994</option>
+												<option value="1993">1993</option>
+												<option value="1992">1992</option>
+												<option value="1991">1991</option>
+											</select>
+										</div>
+										<div id="content_dl_tow_mon">
+											<span id="top_bottom"></span>
+											<!-- <span id="now_mon">1</span> -->
+											<select name="b" id="mon">
+												<option value="1">1</option>
+												<option value="2">2</option>
+												<option value="3">3</option>
+												<option value="4">4</option>
+												<option value="5">5</option>
+												<option value="6">6</option>
+												<option value="7">7</option>
+												<option value="8">8</option>
+												<option value="9">9</option>
+												<option value="10">10</option>
+												<option value="11">11</option>
+												<option value="12">12</option>
+											</select>
+										</div>
+										<div id="content_dl_tow_day">
+											<span id="top_bottom"></span>
+											<!-- <span id="now_day">1</span> -->
+											<select name="b" id="day">
+												<option value="1">1</option>
+												<option value="2">2</option>
+												<option value="3">3</option>
+												<option value="4">4</option>
+												<option value="5">5</option>
+												<option value="6">6</option>
+												<option value="7">7</option>
+												<option value="8">8</option>
+												<option value="9">9</option>
+												<option value="10">10</option>
+												<option value="11">11</option>
+												<option value="12">12</option>
+												<option value="13">13</option>
+												<option value="14">14</option>
+												<option value="15">15</option>
+												<option value="16">16</option>
+												<option value="17">17</option>
+												<option value="18">18</option>
+												<option value="19">19</option>
+												<option value="20">20</option>
+												<option value="21">21</option>
+												<option value="22">22</option>
+												<option value="23">23</option>
+												<option value="24">24</option>
+												<option value="25">25</option>
+												<option value="26">26</option>
+												<option value="27">27</option>
+												<option value="28">28</option>
+												<option value="29">29</option>
+												<option value="30">30</option>
+												<option value="31">31</option>
+											</select>
+										</div>
+									</div>
+								</li>
+							</ul>
+						</dd>
+						<dd id="content_dl_three">
+							<ul>
+								<li>验证码<b>*</b>
+									<div id="top_three">
+										<div id="content_dl_three_auth"><input autocomplete="off" id="content_dl_three_auth_count" type="text" placeholder="请输入验证码"></div>
+									
+										<div id="content_dl_three_authin"></div>
+									</div>
+									<a id="cut" href="#">换一张</a>
+									<span id="auth_hint" style="color:red"></span>
+								</li>
+								<li>短信验证码<b>*</b>
+									<div class="message">
+										<div id="content_dl_three_note"><input autocomplete="off" id="content_dl_three_note_count" type="text" ></div>
+										<div id="content_dl_three_notein">发送短信验证码</div>
+									</div>
+									<span id="note_hint" style="color:red"></span>
+								</li>
+								<li>
+									<div  id="content_dl_three_law">一旦创建账户，即表明你同意匡威的<a href="">法律声明</a>和<a href="">使用规则</a></div>
+									
+									<button id="content_dl_three_Toregister">注册账户<span id="Toregister_logo"><img id="logo_count" src="images/头部/sprites_header_footer.png" alt=""></span></button>
+								</li>
+							</ul>
+						</dd>
+					</dl>
+				</div>
+			</div>
+			<div id="Search_box">
+					<input type="text" id="query_box">
+					<span id="query_box_text">请随便搜搜</span>
+					<a id="magnifying" href="#"></a>
+					<a id="fork" href="#"></a>
+			</div>
+			<div class="row col-lg-12 col-md-12 col-sm-12 col-xs-12 col-lg-offset-0 col-md-offset-0 col-sm-offset-0 col-xs-offset-0" id="carousel_img">
+					<div class="carousel_img_center">
+						<ul class="nav_ul">
+							<li id="man"><a id="man_a" href="#">男的</a></li>
+							<li id="women"><a id="woman_a" href="#">女的</a></li>
+							<li id="child hidden-xs"><a id="child_a" href="#">儿童</a></li>
+							<li class="surname hidden-sm hidden-xs "><a class="style1" href="">型人搭配</a></li>
+							<li class="linkName hidden-sm hidden-xs"><a class="style2" href="">联名合作款</a></li>
+							<li class="map hidden-md hidden-sm hidden-xs"><a class="style3" href="">店铺分布</a></li>
+						</ul>
+					</div>
+			</div>
+			<div id="man_down">
+				<div class="man_down_center"><ul id="top_man"></ul></div>
+					<div id="parting1"></div>
+					<div class="man_down_center2"><ul id="bottom_man"></ul></div>
+				
+			</div>
+			<div id="woman_down">
+				<div class="man_down_center"><ul id="top_woman"></ul></div>
+				<div id="parting2"></div>
+				<div class="man_down_center2"><ul id="bottom_woman"></ul></div>
+			</div>
+			<div id="child_down">
+				<div class="man_down_center3"><ul id="top_child"></ul></div>
+				<div id="parting3"></div>
+				<div class="man_down_center4"><ul id="bottom_child"></ul></div>
+			</div>
+		</div>
+		<!-- 敬告 -->
+				<a id="warning_a" href="http://www.baidu.com">尊敬的顾客您好，我们店铺是不会泄露您的消费信息的，请放心。另外我们也不会要求获取、收集、使用任何与消费者金融消费类（如：信用卡）信息，如果接到以上信息电话，是属于诈骗电话，请勿相信，以防钱财损失。如您对订单有疑问，请联系在线客服</a>
+		<!-- 聊天框 -->
+		<a href="">
+		<div id="char_move">
+		</div>
+		</a>
+		<!-- 轮播图等等等等 -->
+		<div class="container-fluid" id="slideshow">
+			<div class="row" id="slideshow_row">
+				<a href="#"><img id="img1" src="images/透明广告/chuck_70_egret_Banner_Desktop_0927.jpg" alt=""></a>
+				<a href="##"><img id="img2" src="images/透明广告/OS_Sierra_copy_PC_1001.jpg" alt=""></a>
+				<a href="###"><img id="img3" src="images/透明广告/Run_Star_website banner_desktop_0928.jpg" alt=""></a>
+				<a href="####"><img id="img4" src="images/透明广告/UNDERCOVER_BN_PC_0925.jpg" alt=""></a>
+				<a href="#####"><img id="img5" src="images/透明广告/utility_jacket_APP_PC_1001.jpg" alt=""></a>
+
+				<div class="left">
+					<a id="left_a" href="#"></a>
+				</div>
+				<div class="right">
+					<a id="right_a" href="#"></a>
+				</div>
+			</div>
+			<!--  -->
+			<div id="slideshow_link">
+				<a id="show" href="">JWA</a>
+				<a href="">真的有故事</a>
+				<a href="">Chuck 70</a>
+				<a  href="">One Star</a>
+				<a  href="">Utility Jacket</a>
+		</div>
+		</div>
+		<!-- 热卖单品 -->
+		<div id="hot_sale">
+			<div id="list">
+				<div id="list_head">
+					<i class="left_wire"></i>
+					<i class="right_wire"></i>
+					<h1>热卖单品</h1>
+				</div>
+				<div id="specific_product">
+					<div id="hot_man">
+						<!-- <a href=""></a>
+						<a href=""><img src="" alt=""></a> -->
+					</div>
+					<div id="hot_woman">
+						<!-- <a href="">女的踩的</a>
+						<a href=""><img src="" alt=""></a> -->
+					</div>
+					<div id="hot_cross">
+						<!-- <a href="">穿的</a>
+						<a href=""><img src="" alt=""></a> -->
+					</div>
+					<div id="hot_wear">
+						<!-- <a href="">戴的</a>
+						<a href=""><img src="" alt=""></a> -->
+					</div>
+				</div>
+				<div id="divide">
+					<div class="bearing"></div>
+					<div id="Move_arrow"></div>
+				</div>
+				<div id="box">
+					<div id="one_show">
+						<div id="one_show_top">
+							<div class="one_show_top_box">
+								<dl id="one_show_top_box_1">
+									<!-- <dd><img src="" alt=""></dd>
+									<dt><a href=""></a></dt>
+									<dt></dt> -->
+								</dl>
+								<dl id="one_show_top_box_2">
+									<!-- <dd><img src="" alt=""></dd>
+									<dt><a href=""></a></dt>
+									<dt></dt> -->
+								</dl>
+								<dl id="one_show_top_box_3">
+									<!-- <dd><img src="" alt=""></dd>
+									<dt><a href=""></a></dt>
+									<dt></dt> -->
+								</dl>
+								<dl id="one_show_top_box_4">
+									<!-- <dd><img src="" alt=""></dd>
+									<dt><a href=""></a></dt>
+									<dt></dt> -->
+								</dl>
+							</div>
+						</div>
+						<div id="one_show_center">
+							<div class="one_show_center_box">
+								<dl id="one_show_center_box_1">
+									<!-- <dd><img src="" alt=""></dd>
+									<dt><a href=""></a></dt>
+									<dt></dt> -->
+								</dl>
+								<dl id="one_show_center_box_2">
+									<!-- <dd><img src="" alt=""></dd>
+									<dt><a href=""></a></dt>
+									<dt></dt> -->
+								</dl>
+								<dl id="one_show_center_box_3">
+									<!-- <dd><img src="" alt=""></dd>
+									<dt><a href=""></a></dt>
+									<dt></dt> -->
+								</dl>
+								<dl id="one_show_center_box_4">
+									<!-- <dd><img src="" alt=""></dd>
+									<dt><a href=""></a></dt>
+									<dt></dt> -->
+								</dl>
+							</div>
+						</div>
+						<div id="one_show_bottom">
+							<a id="look1" href="">查看所有男的踩的所有新商品 <span id="loik1_link"></span></a>
+						</div>
+					</div>
+					<div id="tow_show">
+						<div id="tow_show_top">
+							<div class="tow_show_top_box">
+								<dl id="tow_show_top_box_1">
+									<!-- <dd><img src="" alt=""></dd>
+									<dt><a href=""></a></dt>
+									<dt></dt> -->
+								</dl>
+								<dl id="tow_show_top_box_2">
+									<!-- <dd><img src="" alt=""></dd>
+									<dt><a href=""></a></dt>
+									<dt></dt> -->
+								</dl>
+								<dl id="tow_show_top_box_3">
+									<!-- <dd><img src="" alt=""></dd>
+									<dt><a href=""></a></dt>
+									<dt></dt> -->
+								</dl>
+								<dl id="tow_show_top_box_4">
+									<!-- <dd><img src="" alt=""></dd>
+									<dt><a href=""></a></dt>
+									<dt></dt> -->
+								</dl>
+							</div>
+						</div>
+						<div id="tow_show_center">
+							<div class="tow_show_center_box">
+								<dl id="tow_show_center_box_1">
+									<!-- <dd><img src="" alt=""></dd>
+									<dt><a href=""></a></dt>
+									<dt></dt> -->
+								</dl>
+								<dl id="tow_show_center_box_2">
+									<!-- <dd><img src="" alt=""></dd>
+									<dt><a href=""></a></dt>
+									<dt></dt> -->
+								</dl>
+								<dl id="tow_show_center_box_3">
+									<!-- <dd><img src="" alt=""></dd>
+									<dt><a href=""></a></dt>
+									<dt></dt> -->
+								</dl>
+								<dl id="tow_show_center_box_4">
+									<!-- <dd><img src="" alt=""></dd>
+									<dt><a href=""></a></dt>
+									<dt></dt> -->
+								</dl>
+							</div>
+						</div>
+						<div id="tow_show_bottom">
+							<a id="look2" href="">查看所有女的踩的所有新商品 <span id="loik2_link"></span></a>
+						</div>
+					</div>
+					<div id="three_show">
+						<div id="three_show_top">
+							<div class="three_show_top_box">
+								<dl id="three_show_top_box_1">
+									<!-- <dd><img src="" alt=""></dd>
+									<dt><a href=""></a></dt>
+									<dt></dt> -->
+								</dl>
+								<dl id="three_show_top_box_2">
+									<!-- <dd><img src="" alt=""></dd>
+									<dt><a href=""></a></dt>
+									<dt></dt> -->
+								</dl>
+								<dl id="three_show_top_box_3">
+									<!-- <dd><img src="" alt=""></dd>
+									<dt><a href=""></a></dt>
+									<dt></dt> -->
+								</dl>
+								<dl id="three_show_top_box_4">
+									<!-- <dd><img src="" alt=""></dd>
+									<dt><a href=""></a></dt>
+									<dt></dt> -->
+								</dl>
+							</div>
+						</div>
+						<div id="three_show_center">
+							<div class="three_show_center_box">
+								<dl id="three_show_center_box_1">
+									<!-- <dd><img src="" alt=""></dd>
+									<dt><a href=""></a></dt>
+									<dt></dt> -->
+								</dl>
+								<dl id="three_show_center_box_2">
+									<!-- <dd><img src="" alt=""></dd>
+									<dt><a href=""></a></dt>
+									<dt></dt> -->
+								</dl>
+								<dl id="three_show_center_box_3">
+									<!-- <dd><img src="" alt=""></dd>
+									<dt><a href=""></a></dt>
+									<dt></dt> -->
+								</dl>
+								<dl id="three_show_center_box_4">
+									<!-- <dd><img src="" alt=""></dd>
+									<dt><a href=""></a></dt>
+									<dt></dt> -->
+								</dl>
+							</div>
+						</div>
+						<div id="three_show_bottom">
+							<a id="look3" href="">查看所有穿的新商品 <span id="loik3_link"></span></a>
+						</div>
+					</div>
+					<div id="four_show">
+						<div id="four_show_top">
+							<div class="four_show_top_box">
+								<dl id="four_show_top_box_1">
+									<!-- <dd><img src="" alt=""></dd>
+									<dt><a href=""></a></dt>
+									<dt></dt> -->
+								</dl>
+								<dl id="four_show_top_box_2">
+									<!-- <dd><img src="" alt=""></dd>
+									<dt><a href=""></a></dt>
+									<dt></dt> -->
+								</dl>
+								<dl id="four_show_top_box_3">
+									<!-- <dd><img src="" alt=""></dd>
+									<dt><a href=""></a></dt>
+									<dt></dt> -->
+								</dl>
+								<dl id="four_show_top_box_4">
+									<!-- <dd><img src="" alt=""></dd>
+									<dt><a href=""></a></dt>
+									<dt></dt> -->
+								</dl>
+							</div>
+						</div>
+						<div id="four_show_center">
+							<div class="four_show_center_box">
+								<dl id="four_show_center_box_1">
+									<!-- <dd><img src="" alt=""></dd>
+									<dt><a href=""></a></dt>
+									<dt></dt> -->
+								</dl>
+								<dl id="four_show_center_box_2">
+									<!-- <dd><img src="" alt=""></dd>
+									<dt><a href=""></a></dt>
+									<dt></dt> -->
+								</dl>
+								<dl id="four_show_center_box_3">
+									<!-- <dd><img src="" alt=""></dd>
+									<dt><a href=""></a></dt>
+									<dt></dt> -->
+								</dl>
+								<dl id="four_show_center_box_4">
+									<!-- <dd><img src="" alt=""></dd>
+									<dt><a href=""></a></dt>
+									<dt></dt> -->
+								</dl>
+							</div>
+						</div>
+						<div id="four_show_bottom">
+							<a id="look4" href="">查看所有戴的新商品 <span id="loik4_link"></span></a>
+						</div>
+					</div>
+				</div>
+			
+				<div id="price">
+					<div id="list_head">
+						<i class="left_wire"></i>
+						<i class="right_wire"></i>
+						<h1>新品热荐</h1>
+					</div>
+					<div id="box2">
+						<div id="price_one">
+								<dl id="price_one_1">
+									<!-- <dd><img src="" alt=""></dd>
+									<dt><a href=""></a></dt>
+									<dt></dt> -->
+								</dl>
+								<dl id="price_one_2">
+									<!-- <dd><img src="" alt=""></dd>
+									<dt><a href=""></a></dt>
+									<dt></dt> -->
+								</dl>
+								<dl id="price_one_3">
+									<!-- <dd><img src="" alt=""></dd>
+									<dt><a href=""></a></dt>
+									<dt></dt> -->
+								</dl>
+								<dl id="price_one_4">
+									<!-- <dd><img src="" alt=""></dd>
+									<dt><a href=""></a></dt>
+									<dt></dt> -->
+								</dl>
+						</div>
+						<div id="price_tow">
+							<dl id="price_tow_1">
+									<!-- <dd><img src="" alt=""></dd>
+									<dt><a href=""></a></dt>
+									<dt></dt> -->
+								</dl>
+								<dl id="price_tow_2">
+									<!-- <dd><img src="" alt=""></dd>
+									<dt><a href=""></a></dt>
+									<dt></dt> -->
+								</dl>
+								<dl id="price_tow_3">
+									<!-- <dd><img src="" alt=""></dd>
+									<dt><a href=""></a></dt>
+									<dt></dt> -->
+								</dl>
+								<dl id="price_tow_4">
+									<!-- <dd><img src="" alt=""></dd>
+									<dt><a href=""></a></dt>
+									<dt></dt> -->
+								</dl>
+						</div>
+						<div id="price_three">
+							<dl id="price_three_1">
+									<!-- <dd><img src="" alt=""></dd>
+									<dt><a href=""></a></dt>
+									<dt></dt> -->
+								</dl>
+								<dl id="price_three_2">
+									<!-- <dd><img src="" alt=""></dd>
+									<dt><a href=""></a></dt>
+									<dt></dt> -->
+								</dl>
+								<dl id="price_three_3">
+									<!-- <dd><img src="" alt=""></dd>
+									<dt><a href=""></a></dt>
+									<dt></dt> -->
+								</dl>
+								<dl id="price_three_4">
+									<!-- <dd><img src="" alt=""></dd>
+									<dt><a href=""></a></dt>
+									<dt></dt> -->
+								</dl>
+						</div>
+						<div id="price_four">
+							<dl id="price_four_1">
+									<!-- <dd><img src="" alt=""></dd>
+									<dt><a href=""></a></dt>
+									<dt></dt> -->
+								</dl>
+								<dl id="price_four_2">
+									<!-- <dd><img src="" alt=""></dd>
+									<dt><a href=""></a></dt>
+									<dt></dt> -->
+								</dl>
+								<dl id="price_four_3">
+									<!-- <dd><img src="" alt=""></dd>
+									<dt><a href=""></a></dt>
+									<dt></dt> -->
+								</dl>
+								<dl id="price_four_4">
+									<!-- <dd><img src="" alt=""></dd>
+									<dt><a href=""></a></dt>
+									<dt></dt> -->
+								</dl>
+						</div>
+					</div>
+				</div>
+
+				<div id="street">
+					<div class="street_box">
+						<img src="images/街头先行/logo-icon.png" alt="">
+						<span>街头先行</span>
+					</div>
+				</div>
+				<div id="street_details">
+					<div id="street_details_left">
+						<a id="street_details_left_link" href="">
+							<img src="images/街头先行/HPTouts-1 CTAS70_181001.jpg" alt="">
+							<div id="gray"></div>
+						</a>
+						<a id="street_details_left_link2" href="">
+							<h1 id="street_details_left_link2_t">只用细节说话</h1>
+							<p id="street_details_left_link2_p">Chuck Taylor All Star’70延续70鞋款的经典鞋型设计，偏窄鞋头与修长鞋型上脚优雅显瘦。同时鞋面采用舒适强韧的帆布材料，提升了品质感。沿用至今的复古大鞋舌，不对称鞋头挡泥板与光亮的鞋围条细节，加厚海绵鞋垫提升了舒适度。</p>
+						</a>
+						<div id="street_details_butn">
+							<a id="butn_text" href="">查看更多</a>
+							<span id="butn_logo"></span>
+						</div>
+					</div>
+	
+					<div id="street_details_right">
+						<a id="street_details_right_link" href="">
+							<img src="images/街头先行/HPTouts-2OS_181001.jpg" alt="">
+							<div id="gray2"></div>
+						</a>
+						<a id="street_details_right_link2" href="">
+							<h1 id="street_details_right_link2_t">拒绝打分</h1>
+							<p id="street_details_right_link2_p">经典款"ONE STAR"款式，自然优雅，从视觉上放松人们的心情。融入SKATE元素，源于纽约街头设计灵感，呈现出舒适的穿着体验，行走舒适自如，让你尽享运动中的乐趣。</p>
+						</a>
+						<div id="street_details_butn2">
+							<a id="butn_text2" href="">查看更多</a>
+							<span id="butn_logo2"></span>
+						</div>
+					</div>
+				</div>
+				<div id="street">
+					<div class="street_box">
+						<img src="images/街头先行/logo-icon.png" alt="">
+						<span>至酷精选 玩转潮流</span>
+					</div>
+				</div>
+				<div class="end_recommend">
+					<div id="recommend_one">
+						<a id="recommend_one_img" href="">
+							<img src="images/至酷精选/BTouts-1APP _181001.jpg" alt="">
+							<div id="Gray_animation"></div>
+						</a>
+						<a id="recommend_one_text" href="">
+							<h1 id="recommend_one_text_h">功能夹克</h1>
+							<p id="recommend_one_text_p">让整体焕发出新的生命力，年轻感强烈。</p>
+						</a>
+						<div id="recommend_one_link">
+							<a id="recommend_one_link_text" href="">查看更多</a>
+							<span id="recommend_one_link_logo"></span>
+						</div>
+					</div>
+					<div id="recommend_tow">
+						<a id="recommend_tow_img" href="">
+							<img src="images/至酷精选/BTouts-2APP_181001.jpg" alt="">
+							<div id="Gray2_animation"></div>
+						</a>
+						<a id="recommend_tow_text" href="">
+							<h1 id="recommend_tow_text_h">双面有型</h1>
+							<p id="recommend_tow_text_p">拉链外套，让整体焕发出新的生命力，年轻感强烈。采用轻薄材质面料，轻质可打包，穿着柔软舒适，增添几分华丽气息。</p>
+						</a>
+						<div id="recommend_tow_link">
+							<a id="recommend_tow_link_text" href="">查看更多</a>
+							<span id="recommend_tow_link_logo"></span>
+						</div>
+					</div>
+					<div id="recommend_three">
+						<a id="recommend_three_img" href="">
+							<img src="images/至酷精选/BTouts-3ACC_181001.jpg" alt="">
+							<div id="Gray3_animation"></div>
+						</a>
+						<a id="recommend_three_text" href="">
+							<h1 id="recommend_three_text_h">造型加分</h1>
+							<p id="recommend_three_text_p">拥有多功能的内部口袋及电脑插袋，满足工作与休闲的双重需求。可调节软垫背带，赋予舒适的背包体验。</p>
+						</a>
+						<div id="recommend_three_link">
+							<a id="recommend_three_link_text" href="">查看更多</a>
+							<span id="recommend_three_link_logo"></span>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- 底部1 -->
+			<div class="row col-lg-12 col-md-12 col-sm-12 col-xs-12 col-lg-offset-0 col-md-offset-0 col-sm-offset-0 col-xs-offset-0" id="bottom1">
+				<h1 class="title">关注CONVERSE</h1>
+				<p class="introduce">Converse同时活跃在各类社交网络平台，点击下列你所喜爱的常用社交平台，密切关注Converse的最新产品与资讯。</p>
+			</div>
+			<div class="icon row col-lg-12 col-md-12 col-sm-12 col-xs-12 col-lg-offset-0 col-md-offset-0 col-sm-offset-0 col-xs-offset-0" id="con">
+				<div class="icon_center">
+					<a class="hiddex-xs" href=""></a>
+					<a class="hiddex-xs" href=""></a>
+					<a class="hiddex-xs" href=""></a>
+					<a class="hiddex-sm" href=""></a>
+					<a class="hiddex-md" href=""></a>
+				</div>
+			</div>
+		<!-- 底部2 -->
+		<div class="bottom2 row col-lg-12 col-md-12 col-sm-12 col-xs-12 col-lg-offset-0 col-md-offset-0 col-sm-offset-0 col-xs-offset-0">
+					<div class="bottom2_center">
+						<div class="transverse"></div>
+					<dl class="pate1">
+						<dt><a id="pate1_man" href="">男的</a></dt>
+						<dd><a id="pate1_man2" href="">CHUCK TAYLOR ALL STAR</a></dd>
+						<dd><a href="">CONVERSE CONS</a></dd>
+						<dd><a href="">JACK PURCELL</a></dd>
+						<dd><a href="">CHUCK II</a></dd>
+						<dd><a id="pate1_man3" href="">踩的</a></dd>
+						<dd><a href="">穿的</a></dd>
+						<dd><a href="">戴的</a></dd>
+						<dd><a href="">优惠</a></dd>
+					</dl>
+					<dl class="pate2">
+						<dt><a id="pate2_woman" href="">女的</a></dt>
+						<dd><a id="pate2_woman2" href="">CHUCK TAYLOR ALL STAR</a></dd>
+						<dd><a href="">CONVERSE CONS</a></dd>
+						<dd><a href="">JACK PURCELL</a></dd>
+						<dd><a href="">CHUCK II</a></dd>
+						<dd><a id="pate2_woman3" href="">踩的</a></dd>
+						<dd><a href="">穿的</a></dd>
+						<dd><a href="">戴的</a></dd>
+						<dd><a href="">优惠</a></dd>
+					</dl>
+					<dl class="pate3">
+						<dt><a id="pate3_child" href="">儿童</a></dt>
+						<dd><a  id="pate3_child2" href="">CHUCK TAYLOR ALL STAR</a></dd>
+						<dd><a href="">CONVERSE CONS</a></dd>
+						<dd><a id="pate3_child3" href="">踩的</a></dd>
+						<dd><a href="">穿的</a></dd>
+						<dd><a href="">戴的</a></dd>
+						<dd><a href="">优惠</a></dd>
+					</dl>
+					<dl class="pate4">
+						<dt><a  id="pate4_GL"  href="">GLOBAL</a></dt>
+						<dd><a id="pate4_GL2" href="">CONVERSE GLOBAL SITES</a></dd>
+					</dl>
+					<dl class="pate5">
+						<dt><a id="pate5_account2" href="">我的账户</a></dt>
+						<dd><a id="pate5_account" href="">现有订单</a></dd>
+						<dd><a href="">退换货</a></dd>
+						<dd><a href="">过去订单</a></dd>
+						<dd><a href="">账户设置</a></dd>
+						<dd><a href="">地址薄</a></dd>
+						<dd><a href="">我的优惠劵</a></dd>
+						<dd><a href="">我的收藏</a></dd>
+						<dd><a href="">我的评论</a></dd>
+					</dl>
+					<dl class="pate6">
+						<dt><a id="pate6_help2"  href="">帮助和购物指南</a></dt>
+						<dd><a id="pate6_help" href="">账户</a></dd>
+						<dd><a href="">订单</a></dd>
+						<dd><a href="">尺码</a></dd>
+						<dd><a href="">退货和退款</a></dd>
+						<dd><a href="">换货</a></dd>
+						<dd><a href="">配送</a></dd>
+						<dd><a href="">联系我们</a></dd>
+						<dd><a href="">常见问题</a></dd>
+					</dl>
+					<dl class="pate7">
+						<dt><a id="pate7_NIKE2" href="">NIKE</a></dt>
+						<dd><a id="pate7_NIKE" href="">NIKE+</a></dd>
+						<dd><a href="">JORDAN</a></dd>
+					</dl>
+					</div>
+			</div>
+			<!-- 底部3 -->
+			<div class="row col-lg-12 col-md-12 col-sm-12 col-xs-12 col-lg-offset-0 col-md-offset-0 col-sm-offset-0 col-xs-offset-0" id="bottom3">
+					<div class="bottom3_top_center">
+						<ul>
+							<li class="first"><a href="">关于我们</a></li>
+							<li><a href="">帮助和购物指南</a></li>
+							<li><a href="">法律声明</a></li>
+							<li><a href="">使用法则</a></li>
+						</ul>
+					</div>
+			</div>
+			<div class="row col-lg-12 col-md-12 col-sm-12 col-xs-12 col-lg-offset-0 col-md-offset-0 col-sm-offset-0 col-xs-offset-0" id="bottom3_logo">
+				<div class="bottom3_logo_center">
+					<a class="hiddex-md" href=""><img src="images/底部/header-footer-new2.png" alt=""></a>
+				</div>
+			</div>
+			<div class="records">
+				<p id="records_p">（中国）有限公司 保留所有权利    沪ICP备11044134号-2 <a class="public" href="">沪公网安备 31011002001667号</a></p>
+			</div>
+	</body>
+</html>

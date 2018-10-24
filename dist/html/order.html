@@ -1,0 +1,525 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<title>订单页</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+		<link rel="stylesheet" href="../css/index.min.css">
+		<link rel="stylesheet" href="../css/bootstrap.css">
+		<script src="../js/jquery-1.10.1.min.js"></script>
+		<script src="../js/jquery.cookie.js"></script>
+
+		<script src="../js/carousel3.js"></script>
+		<script src="../js/cookielink.js"></script>
+		<script src="../js/log2.js"></script>
+
+	</head>
+	<body>
+		
+		<!-- 头部 -->
+		<div class="container-fluid" id="header">
+			<div class="head_content row col-lg-12 col-md-12 col-sm-12 col-xs-12 col-lg-offset-0 col-md-offset-0 col-sm-offset-0 col-xs-offset-0" >
+				<div class="head_logo col-lg-2"><a target="_blank" href="../index.html"><img src="../images/头部/header-footer-new3.png" alt=""></a></div>
+				<div class="head_help "><a class="help_link"  href="#"><img src="" alt=""></a></div>
+				<div class="head_find ">
+					<a id="find_link" href="#"></a>
+					<a id="triangle2" href=""></a>
+				</div>
+				<div class="head_chat hidden-md"><a class="chat_link" href="commodity_details.html"></a></div>
+				<div class="head_car ">
+					<div class="car_linkd"><a class="car_linka hidden-xs" href="#">购物车</a></div>
+					<span class="car_num">0</span>
+				</div>
+				<div class="head_log ">
+					<div class="log_link1 hidden-sm hidden-xs"><a id="log_log" href="#">登陆</a></div>
+					<div class="log_link2 hidden-sm hidden-xs"><a class="log_a" href="#">/</a></div>
+					<div class="log_link3 hidden-sm hidden-xs"><a id="log_register" href="#">注册</a></div>
+					<div class="log_man"><a id="log_b" href="#"></a></div>
+					<a id="triangle" href=""></a>
+				</div>
+			</div>
+		</div>
+		<!-- 导航 -->
+		<div class="abc">
+			<div id="disembark1">
+				<div id="log_content">
+					<dl id="log_content_one">
+						<dt id="no_register">还未注册？</dt>
+						<dd id="yes_register">
+							注册账户
+							<span id="yes_register_logo"></span>
+						</dd>
+					</dl>
+					<dl id="log_content_tow">
+						<dt>您可以直接登陆</dt>
+						<a id="head_a" href=""></a>
+						<a href=""></a>
+						<a href=""></a>
+						<a href=""></a>
+					</dl>
+					<form action="">
+						<dl id="log_content_three">
+							<dt>已经成为会员？</dt>
+							<dd id="emil_phon"><input autocomplete="off" id="emil_phon_count" placeholder="邮箱/手机" type="text"></dd>
+							<span class="email_phone" style="color:red"></span>
+							<dd id="phon_password"><input autocomplete="off" id="phon_password_count" placeholder="账户密码" type="password"></dd>
+							<span class="email_phone_password" style="color:red"></span>
+							<dd id="security">
+								<input autocomplete="off" id="security_count" placeholder="请输入验证码" type="text">
+								<div id="security_count2"></div>
+								<span id="email_phone_security" style="color:red"></span>
+							</dd>
+							<dd id="another"><a id="another_count" href="#">换一张</a></dd>
+							<dd id="law">
+								<div id="law_frame">
+									一旦登录，即表明你同意匡威的<a href="">法律声明</a>和<a href="">使用规则</a>
+								</div>
+							</dd>
+							<dd id="enter">
+								登陆
+								<span id="enter_logo"></span>
+							</dd>
+							<dd id="forget_password">
+								<div id="password_count">
+								<span id="password_count_yes">
+									<img id="password_count_yes_ok" src="../images/头部/cart-sprite1.png" alt="">
+								</span>
+								保持登陆状态
+								</div>
+								<div id="forget_p">忘记密码</div>
+							</dd>
+						</dl>
+					</form>
+					
+				</div>
+				<div id="register_content">
+					<dl id="register_content_dl">
+						<dd id="content_dl_one">
+							<ul>
+								<li>手机号码<b>*</b>
+									<div id="content_dl_one_iphone"><input autocomplete="off"  id="content_dl_one_iphone_count" type="text" placeholder="135xxxxx333"></div>
+									<span id="phone_hint" style="color:red"></span>
+								</li>
+								<li>电子邮箱<b>*</b>
+									<div id="content_dl_one_email"><input autocomplete="off" id="content_dl_one_email_count" type="text" placeholder="example@converse.com"></div>
+									<span id="email_hint" style="color:red" ></span>
+								</li>
+								<li>性别<b>*</b>
+									<div id="content_dl_one_sex">
+										<div id="content_dl_one_sex_man"><span id="select_sexman"><img id="select_sexman_img" src="../images/头部/cart-sprite1.png" alt=""></span>男的</div>
+										<div id="content_dl_one_sex_woman"><span id="select_sexwoman"><img id="select_sexwoman_img" src="../images/头部/cart-sprite1.png" alt=""></span>女的</div>
+									</div>
+								</li>
+							</ul>
+						</dd>
+						<dd id="content_dl_tow">
+							<ul>
+								<li>输入密码<b>*</b>
+									<div id="content_dl_tow_word"><input autocomplete="off"  id="content_dl_tow_word_count" type="password" placeholder="密码至少为6位字符"></div>
+									<span id="word_hint" style="color:red"></span>
+								</li>
+								<li>确认密码<b>*</b>
+									<div id="content_dl_tow_aword"><input autocomplete="off"  id="content_dl_tow_aword_count" type="password" placeholder="请再次输入密码"></div>
+									<span id="aword_hint" style="color:red"></span>
+								</li>
+								<li>生日（年-月-日）<b>*</b>
+									<div id="content_dl_tow_data">
+										<div id="content_dl_tow_year">
+											<span id="top_bottom"></span>
+											<!-- <span id="now_year">2018</span> -->
+											<select name="a" id="year">
+												<option value="2018">2018</option>
+												<option value="2017">2017</option>
+												<option value="2016">2016</option>
+												<option value="2015">2015</option>
+												<option value="2014">2014</option>
+												<option value="2013">2013</option>
+												<option value="2012">2012</option>
+												<option value="2011">2011</option>
+												<option value="2010">2010</option>
+												<option value="2009">2009</option>
+												<option value="2008">2008</option>
+												<option value="2007">2007</option>
+												<option value="2006">2006</option>
+												<option value="2005">2005</option>
+												<option value="2004">2004</option>
+												<option value="2003">2003</option>
+												<option value="2002">2002</option>
+												<option value="2001">2001</option>
+												<option value="2000">2000</option>
+												<option value="1999">1999</option>
+												<option value="1998">1998</option>
+												<option value="1997">1997</option>
+												<option value="1996">1996</option>
+												<option value="1995">1995</option>
+												<option value="1994">1994</option>
+												<option value="1993">1993</option>
+												<option value="1992">1992</option>
+												<option value="1991">1991</option>
+											</select>
+										</div>
+										<div id="content_dl_tow_mon">
+											<span id="top_bottom"></span>
+											<!-- <span id="now_mon">1</span> -->
+											<select name="b" id="mon">
+												<option value="1">1</option>
+												<option value="2">2</option>
+												<option value="3">3</option>
+												<option value="4">4</option>
+												<option value="5">5</option>
+												<option value="6">6</option>
+												<option value="7">7</option>
+												<option value="8">8</option>
+												<option value="9">9</option>
+												<option value="10">10</option>
+												<option value="11">11</option>
+												<option value="12">12</option>
+											</select>
+										</div>
+										<div id="content_dl_tow_day">
+											<span id="top_bottom"></span>
+											<!-- <span id="now_day">1</span> -->
+											<select name="b" id="day">
+												<option value="1">1</option>
+												<option value="2">2</option>
+												<option value="3">3</option>
+												<option value="4">4</option>
+												<option value="5">5</option>
+												<option value="6">6</option>
+												<option value="7">7</option>
+												<option value="8">8</option>
+												<option value="9">9</option>
+												<option value="10">10</option>
+												<option value="11">11</option>
+												<option value="12">12</option>
+												<option value="13">13</option>
+												<option value="14">14</option>
+												<option value="15">15</option>
+												<option value="16">16</option>
+												<option value="17">17</option>
+												<option value="18">18</option>
+												<option value="19">19</option>
+												<option value="20">20</option>
+												<option value="21">21</option>
+												<option value="22">22</option>
+												<option value="23">23</option>
+												<option value="24">24</option>
+												<option value="25">25</option>
+												<option value="26">26</option>
+												<option value="27">27</option>
+												<option value="28">28</option>
+												<option value="29">29</option>
+												<option value="30">30</option>
+												<option value="31">31</option>
+											</select>
+										</div>
+									</div>
+								</li>
+							</ul>
+						</dd>
+						<dd id="content_dl_three">
+							<ul>
+								<li>验证码<b>*</b>
+									<div id="top_three">
+										<div id="content_dl_three_auth"><input autocomplete="off" id="content_dl_three_auth_count" type="text" placeholder="请输入验证码"></div>
+									
+										<div id="content_dl_three_authin"></div>
+									</div>
+									<a id="cut" href="#">换一张</a>
+									<span id="auth_hint" style="color:red"></span>
+								</li>
+								<li>短信验证码<b>*</b>
+									<div class="message">
+										<div id="content_dl_three_note"><input autocomplete="off" id="content_dl_three_note_count" type="text" ></div>
+										<div id="content_dl_three_notein">发送短信验证码</div>
+									</div>
+									<span id="note_hint" style="color:red"></span>
+								</li>
+								<li>
+									<div  id="content_dl_three_law">一旦创建账户，即表明你同意匡威的<a href="">法律声明</a>和<a href="">使用规则</a></div>
+									
+									<div id="content_dl_three_Toregister">注册账户<span id="Toregister_logo"><img id="logo_count" src="../images/头部/sprites_header_footer.png" alt=""></span></div>
+								</li>
+							</ul>
+						</dd>
+					</dl>
+				</div>
+			</div>
+			<div id="Search_box">
+					<input type="text" id="query_box">
+					<span id="query_box_text">请随便搜搜</span>
+					<a id="magnifying" href="#"></a>
+					<a id="fork" href="#"></a>
+			</div>
+			<div class="sc">
+				<div class="sc_center">
+					<div class="sc_count">
+						<!-- <div class="one_shopping">
+							<div class="data" >
+								<div class="sc_img"><img src="" alt=""></div>
+								<div class="over_car">已加入购物车
+									<a href="">查看购物车</a>
+								</div>
+								<div class="sc_title">倒萨好滴撒厚底撒的撒旦了</div>
+								<div class="sc_money">$ 9090</div>
+								<div class="sc_detail">
+									<span class="scmodel">型号：101010001</span>
+									<span class="sccolor">颜色：黑色</span>
+									<span class="scsize">尺寸：39.5</span>
+									<span class="scnum">数量：1</span>
+								</div>
+							</div>
+							<div class="taximeter">
+								<div class="close_taximeter"><span>X</span></div>
+								<div class="calculate">
+									<div class="sum">
+									合计:<span id="sum_count">488.00</span>
+									</div>
+									<div class="sb">不包含礼品卡消费金额</div>
+									<div class="currency">
+										<div class="settlement">￥结算</div>
+									</div>
+								</div>
+							</div>
+						</div> -->
+					</div>
+				</div>
+			</div>
+			<div class="row col-lg-12 col-md-12 col-sm-12 col-xs-12 col-lg-offset-0 col-md-offset-0 col-sm-offset-0 col-xs-offset-0" id="carousel_img">
+					<div class="carousel_img_center">
+						<ul class="nav_ul">
+							<li id="man"><a id="man_a" href="#">男的</a></li>
+							<li id="women"><a id="woman_a" href="#">女的</a></li>
+							<li id="child hidden-xs"><a id="child_a" href="#">儿童</a></li>
+							<li class="surname hidden-sm hidden-xs "><a class="style1" href="">型人搭配</a></li>
+							<li class="linkName hidden-sm hidden-xs"><a class="style2" href="">联名合作款</a></li>
+							<li class="map hidden-md hidden-sm hidden-xs"><a class="style3" href="#">店铺分布</a></li>
+						</ul>
+					</div>
+			</div>
+			<div id="man_down">
+				<div class="man_down_center"><ul id="top_man"></ul></div>
+					<div id="parting1"></div>
+					<div class="man_down_center2"><ul id="bottom_man"></ul></div>
+				
+			</div>
+			<div id="woman_down">
+				<div class="man_down_center"><ul id="top_woman"></ul></div>
+				<div id="parting2"></div>
+				<div class="man_down_center2"><ul id="bottom_woman"></ul></div>
+			</div>
+			<div id="child_down">
+				<div class="man_down_center3"><ul id="top_child"></ul></div>
+				<div id="parting3"></div>
+				<div class="man_down_center4"><ul id="bottom_child"></ul></div>
+			</div>
+		</div>
+		<div id="transition" ></div>
+		<!-- 倒计时 -->
+		<div class="count_down">
+			<div class="count_down_center"></div>
+		</div>
+		<!-- 详情 -->
+		<div class="detail">
+			<div class="detail_data">
+				<div class="share">
+					<div class="share_top">
+						<div id="share_top_box">
+							<i id="share_top_logo"></i>
+							<span id="share_top_text">分享</span>
+						</div>
+					</div>
+					<div class="share_center">
+						<div id="share_center_box">
+							<div id="share_center_logo"></div>
+							<div id="share_center_text">加入收藏(999+)</div>
+						</div>			
+					</div>
+					<div class="share_bottom">
+						<div id="share_bottom_box">
+							<div id="share_bottom_logo"></div>
+							<div id="share_bottom_text">(99+)</div>
+						</div>	
+					</div>
+				</div>
+				<div class="matter ">
+					<div class="matter_name">
+						<!-- <div class="matter_name_title">【男女同款】的撒大大撒倒</div>
+						<div class="matter_name_monay">价格是1000</div> -->
+					</div>
+					<a id="matter_box" onfocus="this.blur(); href="#">
+						<div  class="matter_img">
+							<!-- <img class="imgbb" id="imgb" src="../images/透明广告/101009100_2H_NEW.png" alt="">-->
+						</div>
+						<ul id="breviary">
+							<!-- <li id="imgl"><img src="" alt=""></li>
+							 -->
+						</ul>
+					</a>
+					<div id="demo">
+				        <div id="small-box">
+				           
+				            <!-- 显示的大盒子 -->
+				            <div id="mark"></div>
+				             <!-- 放大镜 -->
+				            <div id="float-box"></div>
+				            <img src=""/>
+				        </div>
+				        <div id="big-box">
+				            <img src="../images/头部/101010001_1L_NEW_gaitubao_com_960x960.png"/>
+				            
+				        </div>
+	 		    	</div>
+				</div>
+				<div class="shopping_desire">
+					<div class="desire_conut">
+						<!-- <a id="suo1" onfocus="this.blur(); href="#"><img src="" alt=""></a>
+						<a id="suo2" onfocus="this.blur(); href="#"><img src="" alt=""></a>
+						<a id="suo3" onfocus="this.blur(); href="#"><img src="" alt=""></a>
+						<a id="suo4" onfocus="this.blur(); href="#"><img src="" alt=""></a> -->
+					</div>
+					<div class="char_case">
+						<div class="case_box">
+							<div id="size_logo"></div>
+							<div id="size_link">尺码对照表</div>
+						</div>
+						 <div id="faqbg"></div>
+						 <div id="faqdiv" style="display:none">
+							<a href="#" class="close"><img src="../images/头部/close.jpg" /></a>
+							<div class="other_list">后期添加</div>
+						</div>
+					</div>
+					<div class="shopping">
+						<a class="nowshopping" href="#">立即购买</a>
+						<div class="gouwuche">
+							<a class="waitshopping1" href="#">加入购物车</a>
+							<a class="waitshopping2" href="#">加入购物车</a>
+							<a class="waitshopping3" href="#">加入购物车</a>
+							<a class="waitshopping4" href="#">加入购物车</a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- 轮播图 -->
+		<div class="Rotation">
+			<div id="Rotation_box">
+				<ul>
+					<li><a href=""><span>ConverX 70</span><img src="../images/热爱推荐/132169C100_1B_NEW.png" alt=""></a></li>
+					<li><a href=""><span>Con X 10</span><img src="../images/热爱推荐/132170C001_1B_NEW.png" alt=""></a></li>
+					<li><a href=""><span>ConverX 80</span><img src="../images/热爱推荐/162054C721_1B_NEW.png" alt=""></a></li>
+					<li><a href=""><span>Conveon X 70</span><img src="../images/热爱推荐/162055C400_1B_NEW.png" alt=""></a></li>
+					<li><a href=""><span>ConverX 70</span><img src="../images/热爱推荐/162052C322_1B_NEW.png" alt=""></a></li>
+					<li><a href=""><span>ConverX</span><img src="../images/热爱推荐/162394C200_1B_NEW.png" alt=""></a></li>
+
+					<li><a href=""><span>Conver sta 230</span><img src="../images/热爱推荐/158369C001_1B_NEW.png" alt=""></a></li>
+					<li><a href=""><span>Conver sta 230</span><img src="../images/热爱推荐/162064C400_1B_NEW.png" alt=""></a></li>
+					<li><a href=""><span>Conver sta 230</span><img src="../images/热爱推荐/162395C001_1B_NEW.png" alt=""></a></li>
+					<li><a href=""><span>Conver sta 230</span><img src="../images/热爱推荐/162509C556_1B_NEW.png" alt=""></a></li>
+					<li><a href=""><span>Conver sta 230</span><img src="../images/热爱推荐/162059C613_1B_NEW.png" alt=""></a></li>
+					<li><a href=""><span>Conver sta 230</span><img src="../images/热爱推荐/162549C613_1B_NEW.png" alt=""></a></li>
+				</ul>
+			</div>
+		</div>
+		<!-- 聊天框 -->
+		<a href=""><div id="char_move"></div></a>
+		<!-- 底部1 -->
+			<div class="row col-lg-12 col-md-12 col-sm-12 col-xs-12 col-lg-offset-0 col-md-offset-0 col-sm-offset-0 col-xs-offset-0" id="bottom1">
+				<h1 class="title">关注CONVERSE</h1>
+				<p class="introduce">Converse同时活跃在各类社交网络平台，点击下列你所喜爱的常用社交平台，密切关注Converse的最新产品与资讯。</p>
+			</div>
+			<div class="icon row col-lg-12 col-md-12 col-sm-12 col-xs-12 col-lg-offset-0 col-md-offset-0 col-sm-offset-0 col-xs-offset-0" id="con">
+				<div class="icon_center">
+					<a class="hiddex-xs" href=""></a>
+					<a class="hiddex-xs" href=""></a>
+					<a class="hiddex-xs" href=""></a>
+					<a class="hiddex-sm" href=""></a>
+					<a class="hiddex-md" href=""></a>
+				</div>
+			</div>
+		<!-- 底部2 -->
+		<div class="bottom2 row col-lg-12 col-md-12 col-sm-12 col-xs-12 col-lg-offset-0 col-md-offset-0 col-sm-offset-0 col-xs-offset-0">
+					<div class="bottom2_center">
+						<div class="transverse"></div>
+					<dl class="pate1">
+						<dt><a id="pate1_man" href="">男的</a></dt>
+						<dd><a id="pate1_man2" href="">CHUCK TAYLOR ALL STAR</a></dd>
+						<dd><a href="">CONVERSE CONS</a></dd>
+						<dd><a href="">JACK PURCELL</a></dd>
+						<dd><a href="">CHUCK II</a></dd>
+						<dd><a id="pate1_man3" href="">踩的</a></dd>
+						<dd><a href="">穿的</a></dd>
+						<dd><a href="">戴的</a></dd>
+						<dd><a href="">优惠</a></dd>
+					</dl>
+					<dl class="pate2">
+						<dt><a id="pate2_woman" href="">女的</a></dt>
+						<dd><a id="pate2_woman2" href="">CHUCK TAYLOR ALL STAR</a></dd>
+						<dd><a href="">CONVERSE CONS</a></dd>
+						<dd><a href="">JACK PURCELL</a></dd>
+						<dd><a href="">CHUCK II</a></dd>
+						<dd><a id="pate2_woman3" href="">踩的</a></dd>
+						<dd><a href="">穿的</a></dd>
+						<dd><a href="">戴的</a></dd>
+						<dd><a href="">优惠</a></dd>
+					</dl>
+					<dl class="pate3">
+						<dt><a id="pate3_child" href="">儿童</a></dt>
+						<dd><a  id="pate3_child2" href="">CHUCK TAYLOR ALL STAR</a></dd>
+						<dd><a href="">CONVERSE CONS</a></dd>
+						<dd><a id="pate3_child3" href="">踩的</a></dd>
+						<dd><a href="">穿的</a></dd>
+						<dd><a href="">戴的</a></dd>
+						<dd><a href="">优惠</a></dd>
+					</dl>
+					<dl class="pate4">
+						<dt><a  id="pate4_GL"  href="">GLOBAL</a></dt>
+						<dd><a id="pate4_GL2" href="">CONVERSE GLOBAL SITES</a></dd>
+					</dl>
+					<dl class="pate5">
+						<dt><a id="pate5_account2" href="">我的账户</a></dt>
+						<dd><a id="pate5_account" href="">现有订单</a></dd>
+						<dd><a href="">退换货</a></dd>
+						<dd><a href="">过去订单</a></dd>
+						<dd><a href="">账户设置</a></dd>
+						<dd><a href="">地址薄</a></dd>
+						<dd><a href="">我的优惠劵</a></dd>
+						<dd><a href="">我的收藏</a></dd>
+						<dd><a href="">我的评论</a></dd>
+					</dl>
+					<dl class="pate6">
+						<dt><a id="pate6_help2"  href="">帮助和购物指南</a></dt>
+						<dd><a id="pate6_help" href="">账户</a></dd>
+						<dd><a href="">订单</a></dd>
+						<dd><a href="">尺码</a></dd>
+						<dd><a href="">退货和退款</a></dd>
+						<dd><a href="">换货</a></dd>
+						<dd><a href="">配送</a></dd>
+						<dd><a href="">联系我们</a></dd>
+						<dd><a href="">常见问题</a></dd>
+					</dl>
+					<dl class="pate7">
+						<dt><a id="pate7_NIKE2" href="">NIKE</a></dt>
+						<dd><a id="pate7_NIKE" href="">NIKE+</a></dd>
+						<dd><a href="">JORDAN</a></dd>
+					</dl>
+					</div>
+			</div>
+			<!-- 底部3 -->
+			<div class="row col-lg-12 col-md-12 col-sm-12 col-xs-12 col-lg-offset-0 col-md-offset-0 col-sm-offset-0 col-xs-offset-0" id="bottom3">
+					<div class="bottom3_top_center">
+						<ul>
+							<li class="first"><a href="">关于我们</a></li>
+							<li><a href="">帮助和购物指南</a></li>
+							<li><a href="">法律声明</a></li>
+							<li><a href="">使用法则</a></li>
+						</ul>
+					</div>
+			</div>
+			<div class="row col-lg-12 col-md-12 col-sm-12 col-xs-12 col-lg-offset-0 col-md-offset-0 col-sm-offset-0 col-xs-offset-0" id="bottom3_logo">
+				<div class="bottom3_logo_center">
+					<a class="hiddex-md" href=""><img src="../images/底部/header-footer-new2.png" alt=""></a>
+				</div>
+			</div>
+	</body>
+</html>
